@@ -15,10 +15,11 @@ public class CustomProcesor implements ItemProcessor<ItemPojo, ItemPojo> {
 		// TODO Auto-generated method stub
 
 		ItemPojo outGoing = new ItemPojo(itemIncoming.getFirstName().toUpperCase(),
-				itemIncoming.getLastName().toLowerCase());
-		
-		log.info("Incoming:",itemIncoming.toString());
-		log.info("Outgoing",itemIncoming.toString());
+				itemIncoming.getLastName().toUpperCase(), itemIncoming.getFriend1().toUpperCase(),
+				itemIncoming.getFriend2().toUpperCase(), itemIncoming.getFriend3().toUpperCase());
+
+		log.info("Incoming:", itemIncoming.toString());
+		log.info("Outgoing", itemIncoming.toString());
 		return outGoing;
 	}
 
